@@ -1,0 +1,96 @@
+/* 導覽列 */
+.navbar{
+    width: 100%;
+    background-color: #d80011;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+.navbar-show{
+    transform: translateY(0px);
+}
+.navbar-menu{
+    width: 100%;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-menu .logo{
+    width: 60px;
+}
+.main-navbar{
+    display: flex;
+    align-items: center;
+}
+.main-navbar .btn-link{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0px 15px;
+    padding: 5px 0px;
+    position: relative;
+}
+.main-navbar .btn-link::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+.main-navbar .btn-link:hover::before{
+    transform: scaleX(1);
+}
+.btn-toggle{
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    transition: opacity 0.5s ease;
+}
+.btn-toggle:hover{
+    opacity: 0.9;
+}
+@media screen and (max-width: 768px){
+    .navbar-menu{
+        padding: 0px 20px;
+    }
+    .main-navbar .btn-link{
+        margin: 0px 12px;
+    }
+}
+@media screen and (max-width: 576px){
+    .btn-toggle{
+        display: flex;
+    }
+    .main-navbar{
+        flex-direction: column;
+        width: 100%;
+        background-color: #d80011;
+        padding-top: 60px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+    }
+    .main-navbar-open{
+        transform: translateY(0px);
+    }
+    .main-navbar .btn-link{
+        margin: 10px 0px;
+    }
+    .main-navbar .btn-link:last-child{
+        margin-bottom: 20px;
+    }
+}
