@@ -20,7 +20,7 @@
     align-items: center;
 }
 .navbar-menu .logo{
-    width: 60px;
+    width: 70px;
 }
 .main-navbar{
     display: flex;
@@ -28,12 +28,12 @@
 }
 .main-navbar .btn-link{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     letter-spacing: 2px;
     color: #fff;
+    padding: 8px 0px;
     margin: 0px 15px;
-    padding: 5px 0px;
     position: relative;
 }
 .main-navbar .btn-link::before{
@@ -45,7 +45,6 @@
     left: 0px;
     bottom: 0px;
     transform: scaleX(0);
-    transform-origin: center;
     transition: transform 0.5s ease;
 }
 .main-navbar .btn-link:hover::before{
@@ -76,21 +75,20 @@
         flex-direction: column;
         width: 100%;
         background-color: #d80011;
-        padding-top: 60px;
         position: absolute;
-        top: 0px;
+        top: 100%;
         left: 0px;
         z-index: -1;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
         transition: transform 0.5s ease;
     }
     .main-navbar-open{
         transform: translateY(0px);
     }
     .main-navbar .btn-link{
-        margin: 10px 0px;
+        margin: 15px 0px;
     }
-    .main-navbar .btn-link:last-child{
+    .main-navbar .btn-link:nth-last-of-type(1){
         margin-bottom: 20px;
     }
 }
